@@ -1,0 +1,447 @@
+/******************************/
+/* GENERAL COMPONENTS */
+/******************************/
+
+/*
+main background: #f2e8d2
+text color: #181715
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+
+/* style the focus ring of all element*/
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(54, 43, 43, 0.5);
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+/* global setting for text style */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+
+.fill-yellow {
+    fill: #f2e8d2;
+}
+
+.fill-white {
+    fill: #fff;
+}
+
+.no-fill {
+    fill: transparent;
+}
+
+.hidden {
+    display: none;
+}
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+/******************************/
+/* HEADER */
+/******************************/
+.header-wrap {
+    max-width: 100%;
+    height: calc(100vh + 15vh);
+    background-color: #fbf8f2;
+    color: #fff;
+    position: relative;
+}
+
+.header-image-container {
+    z-index: 1;
+    max-width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(15, 15, 15, 0.6), rgba(15, 15, 15, 0.6)), url(../images/Slide/programming5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.triangle-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+}
+
+.header-bar {
+    padding: 3rem;
+}
+
+.profile-name {
+    z-index: 10;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.profile-name span {
+    font-family: 'Trirong', sans-serif;
+    font-weight: 200;
+}
+
+.home-link:link, .home-link:visited {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.home-link:hover, .home-link:active {
+    color: rgba(221, 221, 221, 0.6);
+}
+
+.highlight-wrap {
+    width: 30%;
+    transform: translateX(50%) translateY(60%);
+}
+
+.heading-highlight {
+    font-family: "Proza Libre", sans-serif;
+    font-size: 6.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin-bottom: 4rem;
+}
+
+.highlight-text {
+    padding-left: 4rem;
+    border-left: 1px solid #fff;
+    font-family: "Cormorant Garamond", sans-serif;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+}
+
+.btn--cta {
+    z-index: 10;
+    position: absolute;
+    right: 3vw;
+    top: calc(100vh - 10vh);
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn--cta:hover {
+    transform: scaleY(1.2);
+    transform-origin: top;
+}
+
+.arrow-down-outline {
+    width: 4.8rem;
+    height: 4.8rem;
+    color: #181715;
+}
+
+
+/******************************/
+/* TIMELINE */
+/******************************/
+
+.section-timeline {
+   
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #f2e8d2;
+}
+
+/* timeline ruler */
+.section-timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #797469;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+}
+
+.timeline-milestone{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 4.8rem;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.text-container {
+    padding: 2.4rem 3.6rem;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-circle {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 49.74%;
+    background-color: #004d40;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* need update for responsive */
+.timeline-logo,
+.tl-dg-img {
+    width: 30rem;
+}
+
+.timeline-left {
+    text-align: right;
+}
+
+.header-year {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 3.8rem;
+    color: #bbb;
+    padding-bottom: 2.4rem;
+}
+
+.activity-text {
+    font-family: 'Trirong', sans-serif;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+}
+
+.page-break {
+    background-color: #f2e8d2;
+    height: 6.4rem;
+}
+
+/* animation */
+.timeline-animation-wrap {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 110%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.3s;
+}
+
+.timeline-animation-wrap--rotate {
+    transform-origin: top left;
+    transform: rotate(-5deg);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/******************************/
+/* FOOTER */
+/******************************/
+.page-footer {
+    background-color: #181715;
+    height: 9.6rem;
+}
+
+.footer-wrap {
+    height: 100%;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.seperator {
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.logo-linkedin {
+    width: 4.6rem;
+    height: 4.6rem;
+}
+
+
+.contact a:link, .contact a:visited {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.2rem;
+    transition: all 0.3s;
+}
+
+.contact a:hover, .contact a:active {
+    color: rgba(221, 221, 221, 0.6);
+}
+
+/******************************/
+/* MODAL */
+/******************************/
+.timeline-overlay {
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+/* .timeline-dialog-overlay {
+    width: 100vw;
+    overflow: auto;
+} */
+
+/* dialog style */
+div.ui-dialog {
+    overflow: auto;
+    position: fixed;
+    
+    z-index: 30;
+    background: transparent;
+}
+
+/* close button */
+button.ui-dialog-titlebar-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 30px;
+    right: 10px;
+    border: none;
+    z-index: 20;
+    transition: all 0.3s;
+}
+
+button.ui-dialog-titlebar-close:hover {
+    color: #fff;
+    background-color: #b71c1c;
+}
+
+div.ui-widget-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+/* dialog content style */
+
+
+
+.tl-dg-content-wrap {
+    height: 100%;
+    background-color: #fff;
+}
+
+.tl-dg-content {
+    display: block;
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.tl-dg-header {
+    height: 30vh;
+    width: 100%;
+}
+
+.milestone-overlay-triangle {
+    height: 100%;
+    width: 100%;
+}
+
+/* overlay nav */
+.overlay-navbar {
+    position: absolute;
+    margin-top: -18rem;
+    right: 0;
+}
+
+.overlay-navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 8.4rem;
+    border-bottom: 1px solid #999;
+    margin-bottom: 2.4rem;
+}
+
+.overlay-navbar-links li {
+    padding: 1.2rem 0.8rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.overlay-navbar-links li {
+    color: #999999;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.overlay-navbar-links li:hover {
+    color: #444;
+}
+
+.tl-dg-main-content {
+    position: absolute;
+    margin-top: -8rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 4.6rem;
+}
+
+.tl-dg-logo {
+    margin-top: auto;
+}
+
+.tl-dg-story-header {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 6.4rem;
+    padding-bottom: 3.2rem;
+    color: #b71c1c;
+}
+
+.tl-dg-story-time {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 3.2rem;
+    padding-bottom: 6.4rem;
+    color: #999999;
+}
+
+.tl-dg-content-text {
+    font-family: 'Trirong', sans-serif;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+}
+
+.tl-dg-story-description {
+    list-style-position: inside;
+}
+
+.tl-dg-story-description li {
+    padding-bottom: 2.4rem;
+}

@@ -1,0 +1,149 @@
+/* 
+ * file: queries.css
+ * author: Andrew Hoang
+*/
+
+/* 1 em = 16px in media query*/
+
+/******************************/
+/* BELOW 1643px (smaller desktop) */
+/******************************/
+
+@media (max-width: 92em) {
+    /* move up highlights */
+    .highlight-wrap {
+        width: 30%;
+        transform: translateX(50%) translateY(50%);
+    }
+}
+
+
+ /******************************/
+/* BELOW 1200px (landscape tablet) */
+/******************************/
+
+@media (max-width: 75em) {
+    /* resize everything */
+    html {
+        /* reduce to 9x: 9/16 = 56.25% */
+        font-size: 56.25%;
+    }
+
+    /* fix timeline circle */
+    .timeline-circle {
+        left: 49.50%;
+
+    }
+    
+}
+
+ /******************************/
+/* BELOW 940px (tablet) */
+/******************************/
+
+@media (max-width: 59em) {
+    /* scale everything down */
+    html {
+        font-size: 50%;
+    }
+
+
+
+    
+}
+
+ /******************************/
+/* BELOW 814px (smaller tablet) */
+/******************************/
+
+@media (max-width: 51em) {
+    /*resize logo*/
+    .timeline-logo,
+    .tl-dg-img {
+        width: 25rem;
+    }
+
+    .text-container {
+        padding: 2.4rem 4.2rem;
+    }
+
+    /* move up highlights */
+    .highlight-wrap {
+        width: 40%;
+        transform: translateX(50%) translateY(50%);
+    }
+
+    /* close button */
+    button.ui-dialog-titlebar-close {
+        top: 40px;
+    }
+
+}
+
+
+
+ /******************************/
+/* BELOW 704px (smaller tablet) */
+/******************************/
+
+@media (max-width: 44em) {
+    /*resize logo*/
+    .timeline-logo,
+    .tl-dg-img {
+        width: 20rem;
+    }
+
+    /* fix timeline circle */
+    .timeline-circle {
+        left: 49.30%;
+
+    }
+
+    .tl-dg-logo {
+        margin-top: 12%;
+        padding-bottom: 2.4rem;
+    }
+
+    .tl-dg-main-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 4.6rem;
+    }
+
+    /* close button */
+    button.ui-dialog-titlebar-close {
+        top: 50px;
+    }
+
+    
+}
+
+
+ /******************************/
+/* BELOW 610px (phone) */
+/******************************/
+@media (max-width: 38em) {
+    /* scale down */
+    html {
+        font-size: 43%;
+    }
+
+    /*resize logo*/
+    .timeline-logo,
+    .tl-dg-img {
+        max-width: 20rem;
+    }
+
+    /* fix timeline circle */
+    .timeline-circle {
+        left: 49%;
+
+    }
+
+    .tl-dg-logo {
+        margin-top: 20%;
+    }
+
+
+
+}
